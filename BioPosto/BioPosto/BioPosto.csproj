@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF8F834E-E0E7-4284-B262-BE92F3897CE0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BioPosto</RootNamespace>
+    <AssemblyName>BioPosto</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>icone.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.0.1.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsBancoDados.cs" />
+    <Compile Include="clsCliente.cs" />
+    <Compile Include="clsCombustivel.cs" />
+    <Compile Include="DBClass.cs" />
+    <Compile Include="frmCadBio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadBio.Designer.cs">
+      <DependentUpon>frmCadBio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaixa.Designer.cs">
+      <DependentUpon>frmCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClienteLocalizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClienteLocalizar.Designer.cs">
+      <DependentUpon>frmClienteLocalizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportarDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportarDados.Designer.cs">
+      <DependentUpon>frmImportarDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesqBio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesqBio.Designer.cs">
+      <DependentUpon>frmPesqBio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iniReader.cs" />
+    <Compile Include="mmAjuda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mmAjuda.Designer.cs">
+      <DependentUpon>mmAjuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mmCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mmCadastro.Designer.cs">
+      <DependentUpon>mmCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCadBio.resx">
+      <DependentUpon>frmCadBio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCaixa.resx">
+      <DependentUpon>frmCaixa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClienteLocalizar.resx">
+      <DependentUpon>frmClienteLocalizar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportarDados.resx">
+      <DependentUpon>frmImportarDados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesqBio.resx">
+      <DependentUpon>frmPesqBio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mmAjuda.resx">
+      <DependentUpon>mmAjuda.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mmCadastro.resx">
+      <DependentUpon>mmCadastro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxGrFingerXLib">
+      <Guid>{A9995C7C-77BF-4E27-B581-A4B5BBD90E50}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="GrFingerXLib">
+      <Guid>{A9995C7C-77BF-4E27-B581-A4B5BBD90E50}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgOffice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgOffice2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\digital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caixa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone_ajuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_formulario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biometria.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bioMicrosoft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\importar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Good2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icone.ico" />
+    <None Include="Resources\icone_relatorio.png" />
+    <None Include="Resources\salvar.png" />
+    <None Include="Resources\logoAL.jpg" />
+    <None Include="Resources\logoAL.png" />
+    <None Include="Resources\iconeLupa.png" />
+    <None Include="Resources\iconeHomem.png" />
+    <None Include="Resources\iconeHMerro.png" />
+    <None Include="Resources\iconeMulher.png" />
+    <None Include="Resources\bio2.jpg" />
+    <None Include="Resources\confirmar.png" />
+    <None Include="Resources\lupa.png" />
+    <None Include="Resources\form_icone_lupa.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
